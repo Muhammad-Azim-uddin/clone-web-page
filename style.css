@@ -1,0 +1,372 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+nav{
+    background-color: black;
+    margin: 0px auto;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: center; 
+
+
+}
+nav ul li{
+    display:inline-block;
+    margin: 0px 10px;  
+    transition: 0.4s;
+}
+nav ul li a{
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    font-size: 20px;
+    padding: 30px 10px 30px;
+    position: relative;
+    transition: 0.5s;
+}
+nav ul li a:hover{
+    background-color: rgb(199, 130, 162);
+}
+
+nav ul li a::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom:10px;
+    left: 0;
+    visibility: hidden;
+    background: rgb(165, 165, 192);
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    visibility: visible;
+    width: 0%;
+}
+
+/* first drop down */
+
+nav .parent{
+    position: relative ;
+}
+.parent .child{
+    position: absolute;
+    top:100%;
+    color:black;
+    display: block;
+    width: 300px;
+    /* visibility: hidden; */
+    background-color: rgb(49, 48, 48);
+    transition: 0.4s;
+}
+.parent .child{
+    display: none;
+}
+.parent .child li{
+    width: 100%;
+    margin:0;
+    /* display: block; */
+}
+.parent .child li a{
+    /* display: block; */
+    width: 100%;
+}
+.parent:hover .child{
+    display: block;
+}
+
+/* sub sub menu */
+
+.child .sub-parent{
+    position: relative;
+}
+
+
+.child .sub-child{
+    position: absolute;
+    display: block;
+    left:100%;
+    top:0;
+    width: 200px;
+    visibility: hidden;
+    background-color: rgb(76, 121, 167);
+}
+
+
+/* .sub-parent:hover.sub-child{
+    display:inline-block;
+} */
+
+ /* .sub-parent a:hover.sub-child{
+    display: block;
+ } */
+
+.sub-parent.sub-child li{
+    display: block;
+    width: 100%;
+}
+
+.parent .sub-child li a{
+    width: 100%;
+    display: block;
+}
+
+/* .sub-parent:hover.sub-child{
+    display: block;
+    visibility: visible;
+} */
+
+/* try */
+.sub-parent:hover .sub-child{
+    display: block;
+    visibility: visible;
+}
+
+/*  sub sub  menu */
+
+.s-s-parent{
+    position: relative;
+    /* transition:all 0.5s; */
+}
+.s-s-child{
+    position: absolute;
+    left: 220px;
+    top: 0;
+    width: 100px;
+    background: lightcoral;
+    color: darkcyan;
+    display: flex;
+    flex-direction: column;
+    visibility: hidden;
+    transition: all  0.3s ease-in;
+
+    
+}
+/* .s-s-child{
+    display: none;
+} */
+.s-s-child li{
+    width: 100%;
+    display: block;
+}
+.s-s-child li a{
+    width: 100%;
+}
+
+.s-s-parent:hover .s-s-child{
+    left: 200px;
+    visibility: visible;
+    display: block;
+}
+
+
+/* hero section */
+.hero{
+    background: linear-gradient(to left , lightblue,  lightgreen);
+    padding: 20px;
+    width: 100%;
+}
+
+.hero-details{
+    width: auto;
+    margin: 0px auto;
+    text-align: center;
+}
+.hero-details h4{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.hero-details p{
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.hero .icon{
+    width: 80%;
+    margin:80px auto;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background: linear-gradient(to left,  rgba(65, 196, 179, 0.747), rgba(231, 150, 231, 0.692));
+    border-radius: 8px;
+}
+.icon .i-con {
+    width: 300px;
+    margin-right: 40px;
+    height: 120px;
+    border: 1px solid rgba(238, 233, 233, 0.507);
+    border-radius: 8px;
+    transition: 0.3s;
+   
+}
+.icon .i-con:hover{
+    box-shadow: 0px 0px 8px rgb(128, 124, 124);
+}
+.icon .i-con img{
+    margin: 10px 80px;
+}
+
+.icon .i-con p{
+    text-align: center;
+    font-size: 22px;
+    transition: 0.3s;
+}
+.icon .i-con p:hover{
+    color: orangered;
+}
+
+/* product details */
+
+.Product-details{
+    width: auto;
+    margin: 0px auto;
+    text-align: center;
+}
+.Product-details h4{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.Product-details p{
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.pro-img{
+    width: 100%;
+    padding: 3% 10% 3% 10%;
+    display: flex;
+    justify-content:space-between ;
+}
+.pro-img .img-1{
+    width: 30%;
+    border: 1px solid gainsboro;
+    margin: 10px;
+    border-radius: 8px;
+    background: linear-gradient(rgb(236, 190, 198), rgb(211, 211, 145));
+    transition: 0.3s;
+}
+
+.img-1 img{
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-sizing: border-box;
+
+}
+.img-1 a{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    width: 100%;
+    margin: 10px;
+
+}
+.img-1 p{
+    font-size: 20px;
+    color: orangered;
+    margin: 10px;
+}
+.img-1 p span{
+    color: gray;
+    text-decoration: line-through;
+    font-size: 15px;
+    margin-left: 20px;
+}
+.pro-img .img-1:hover{
+    box-shadow: 0px 0px 8px rgb(128, 124, 124);
+    scale: 1.01;
+}
+
+/* courses  */
+
+.course{
+    width: 100%;
+    padding: 5%;
+
+}
+
+
+.course .c-details{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.course .c-details h3{
+    font-size: 35px;
+    color: rgb(29, 125, 235);
+    margin-bottom: 10px;
+}
+.course .c-details p{
+    font-size: 20px;
+    color: rgb(52, 114, 165);
+}
+.course .c-section{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.c-section .c-all {
+    /* flex-basis: 33%; */
+    background: linear-gradient(to top, rgb(224, 151, 151), lightblue);
+    margin-right: 15px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.c-section .c-all img{
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.c-section .c-all h5{
+    font-size: 18px;
+    font-weight: 300;
+    display: inline-block;
+    cursor: pointer;
+    margin: 8px;
+
+}
+.c-section .c-all h5:hover{
+    color: orangered;
+}
+.c-section .c-all h2{
+    margin-left: 8px;
+}
+
+.c-all .p-b{
+    margin: 20px;
+    margin-left: 0;
+    display: flex;
+}
+
+.c-all .p-b .h5{
+    margin-top:10px;
+    font-weight: 600;
+    color: rgb(56, 53, 52);
+}
+.c-section .c-all:hover{
+    box-shadow: 0px 0px 10px rgb(90, 87, 87);
+}
+.c-all .p-b button{
+    padding:  8px;
+    font-size: 18px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    margin-bottom: 15px ;
+    margin-left: 20px;
+    cursor: pointer;
+    background: linear-gradient(to right, rgb(224, 20, 20),rgb(194, 63, 63));
+}
+.c-all .p-b button:hover{
+    background: transparent;
+    border: 2px solid rgb(209, 30, 30);
+    color: rgba(207, 67, 67, 0.897);
+}
